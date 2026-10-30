@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== هوية Sweet Lab: خلفيات عاجية وبيضاء، أصفر دافئ أساسي ===== */
+:root {
+  --color-primary: #F2B33D;          /* أصفر دافئ — أزرار رئيسية */
+  --color-primary-hover: #E09F1F;
+  --color-primary-soft: #FDF1D6;
+  --color-on-primary: #2B1D00;       /* نص داكن فوق الأصفر لتباين كافٍ */
+  --color-bg: #FBF8F1;               /* عاجي */
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FFFDF8;
+  --color-ink: #231C10;
+  --color-ink-muted: #6E6453;
+  --color-line: #EDE5D3;
+  --color-success: #1F8A57;
+  --color-warning: #B7700F;
+  --color-danger: #C23B32;
+  --color-info: #2C67A6;
+
+  /* ألوان الحالات — مختارة لتتمايز عن الأصفر الأساسي */
+  --status-pending_approval: #B7700F;
+  --status-needs_review: #D25A12;
+  --status-awaiting_kitchen: #2C67A6;
+  --status-acknowledged: #5146C9;
+  --status-in_production: #8A3FC7;
+  --status-ready: #0F8C80;
+  --status-delivered: #1F8A57;
+  --status-rejected: #C23B32;
+  --status-cancelled: #7A7468;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #F5C35E;
+    --color-primary-hover: #F8D284;
+    --color-primary-soft: #3A2C10;
+    --color-on-primary: #1E1500;
+    --color-bg: #15120C;
+    --color-surface: #1E1A13;
+    --color-surface-raised: #252017;
+    --color-ink: #F2ECDF;
+    --color-ink-muted: #ADA390;
+    --color-line: #332C20;
+    --color-success: #4CC08A;
+    --color-warning: #E5A84A;
+    --color-danger: #EE6E64;
+    --color-info: #6FA6DA;
+    --status-pending_approval: #E5A84A;
+    --status-needs_review: #F08A4B;
+    --status-awaiting_kitchen: #6FA6DA;
+    --status-acknowledged: #9D95F0;
+    --status-in_production: #C08CEB;
+    --status-ready: #4CC4B8;
+    --status-delivered: #4CC08A;
+    --status-rejected: #EE6E64;
+    --status-cancelled: #A39C8E;
+    color-scheme: dark;
+  }
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+body { font-size: 16px; line-height: 1.75; }
+h1, h2, h3 { font-weight: 700; line-height: 1.4; }
+:lang(ar) * { letter-spacing: 0 !important; }   /* لا تباعد أحرف على العربي */
+
+:focus-visible {
+  outline: 3px solid var(--color-info);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .card {
+    @apply rounded-card border border-line bg-surface;
+  }
+  .btn {
+    @apply inline-flex min-h-touch items-center justify-center gap-2 rounded-control px-4 font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary { @apply btn bg-primary text-primary-on hover:bg-primary-hover; }
+  .btn-ghost { @apply btn border border-line bg-surface text-ink hover:bg-primary-soft; }
+  .field {
+    @apply block w-full min-h-touch rounded-control border border-line bg-surface px-3 text-ink placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary-soft;
+  }
+  .field[aria-invalid="true"] { @apply border-danger; }
+
+  .status-badge {
+    --st: var(--status-cancelled);
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[13px] font-bold;
+    color: var(--st);
+    background: color-mix(in srgb, var(--st) 13%, transparent);
+  }
+  .status-badge::before {
+    content: '';
+    @apply h-2 w-2 rounded-full;
+    background: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* لون كل حالة */
+.status-badge[data-status="pending_approval"] { --st: var(--status-pending_approval); }
+.status-badge[data-status="needs_review"] { --st: var(--status-needs_review); }
+.status-badge[data-status="awaiting_kitchen"] { --st: var(--status-awaiting_kitchen); }
+.status-badge[data-status="acknowledged"] { --st: var(--status-acknowledged); }
+.status-badge[data-status="in_production"] { --st: var(--status-in_production); }
+.status-badge[data-status="ready"] { --st: var(--status-ready); }
+.status-badge[data-status="delivered"] { --st: var(--status-delivered); }
+.status-badge[data-status="rejected"] { --st: var(--status-rejected); }
+.status-badge[data-status="cancelled"] { --st: var(--status-cancelled); }

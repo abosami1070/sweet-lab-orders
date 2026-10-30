@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Sweet Lab — Kitchen Orders",
+    "description": "Production ordering for the dessert lab's shops and cafés"
+  },
+  "common": {
+    "appName": "Sweet Lab",
+    "appTagline": "Kitchen orders",
+    "signOut": "Sign out",
+    "switchLanguage": "العربية",
+    "switchLanguageLabel": "Switch to Arabic",
+    "menu": "Menu",
+    "mainNav": "Main navigation",
+    "offline": "You're offline. Changes won't be saved until the connection is back.",
+    "backOnline": "Back online.",
+    "riyadhTime": "Riyadh time",
+    "loading": "Loading…"
+  },
+  "roles": {
+    "super_admin": "Super admin",
+    "admin": "Admin",
+    "kitchen_staff": "Kitchen",
+    "customer": "Customer"
+  },
+  "nav": {
+    "home": "Home",
+    "newOrder": "New order",
+    "myOrders": "My orders",
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "planner": "Production plan",
+    "products": "Products",
+    "customers": "Customers",
+    "users": "Users",
+    "settings": "Settings",
+    "kitchenBoard": "Kitchen board"
+  },
+  "status": {
+    "pending_approval": "Pending approval",
+    "needs_review": "Needs review",
+    "awaiting_kitchen": "Awaiting kitchen",
+    "acknowledged": "Acknowledged",
+    "in_production": "In production",
+    "ready": "Ready",
+    "delivered": "Delivered",
+    "rejected": "Rejected",
+    "cancelled": "Cancelled"
+  },
+  "auth": {
+    "title": "Sign in",
+    "subtitle": "Sign in to manage your orders",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "noAccount": "Accounts are created by the lab's admin team. Contact them to open an account for your shop.",
+    "errors": {
+      "emailRequired": "Enter your email",
+      "emailInvalid": "Enter a valid email, like name@shop.com",
+      "passwordRequired": "Enter your password",
+      "invalidCredentials": "Email or password is incorrect",
+      "inactiveAccount": "This account isn't active yet. Contact the lab's admin team to activate it.",
+      "rateLimited": "Too many attempts. Wait a minute and try again.",
+      "network": "Couldn't reach the server. Check your connection and try again.",
+      "generic": "Couldn't sign in. Try again."
+    }
+  },
+  "home": {
+    "greeting": "Welcome, {name}",
+    "customerIntro": "{shop} account",
+    "staffIntro": "Your role: {role}",
+    "summary": "Orders overview",
+    "liveHint": "Numbers update automatically on every change",
+    "emptyCustomer": "No orders yet. Your shop's first order starts from “New order”.",
+    "emptyStaff": "No orders in these statuses right now.",
+    "openSection": "Open"
+  },
+  "pages": {
+    "newOrder": { "title": "New order", "body": "Order form: pick products, quantities and a delivery date, with unavailable slots and double submits blocked." },
+    "myOrders": { "title": "My orders", "body": "Live status for every order, plus one-tap reorder of past orders." },
+    "orders": { "title": "Orders", "body": "Approve, reject or send orders back for changes, with a full history of every change." },
+    "products": { "title": "Products", "body": "Arabic and English names, unit, minimum quantity, prep time and daily capacity." },
+    "customers": { "title": "Customers", "body": "Shops and cafés, their branches and staff accounts." },
+    "users": { "title": "Users", "body": "Create accounts, assign roles and activate them. Super admins only." },
+    "settings": { "title": "Settings", "body": "Same-day cutoff time, closed days, delivery windows and how far ahead orders can be placed." },
+    "kitchen": { "title": "Kitchen board", "body": "Approved orders arrive here instantly: acknowledge, start production, mark ready and delivered." },
+    "planner": { "title": "Production plan", "body": "Quantities grouped by product and day, with each customer's details one tap away." },
+    "nextPhase": "This screen is built in phase two. Its database and permissions are ready now."
+  },
+  "errors": {
+    "ERR_FORBIDDEN": "You don't have permission to do this",
+    "ERR_NOT_FOUND": "Order not found",
+    "ERR_DATE_REQUIRED": "Choose a delivery date",
+    "ERR_DATE_IN_PAST": "That date has already passed",
+    "ERR_DATE_TOO_FAR": "That date is beyond the booking window",
+    "ERR_DATE_CLOSED": "The lab is closed on that day",
+    "ERR_CUTOFF_PASSED": "Today's order cutoff has passed. Choose tomorrow or later",
+    "ERR_ITEMS_REQUIRED": "Add at least one product",
+    "ERR_TOO_MANY_ITEMS": "Too many products in one order",
+    "ERR_DUPLICATE_PRODUCT": "A product appears twice. Change its quantity instead",
+    "ERR_PRODUCT_UNAVAILABLE": "One of the products is no longer available",
+    "ERR_QUANTITY_BELOW_MIN": "Quantity is below the product's minimum",
+    "ERR_QUANTITY_STEP": "Quantity doesn't match the product's order step",
+    "ERR_LEAD_TIME": "This product needs more prep time. Choose a later date",
+    "ERR_CAPACITY_EXCEEDED": "Production capacity for that day is full for one of the products",
+    "ERR_BRANCH_INVALID": "Invalid branch",
+    "ERR_WINDOW_INVALID": "That delivery window isn't available",
+    "ERR_CUSTOMER_REQUIRED": "Choose a customer",
+    "ERR_CUSTOMER_INACTIVE": "This shop's account is suspended",
+    "ERR_REQUEST_ID_REQUIRED": "Couldn't send the order. Try again",
+    "ERR_ORDER_LOCKED": "This order can't be edited in its current status",
+    "ERR_STALE_REVISION": "Someone just changed this order. Refresh to see the latest version",
+    "ERR_REASON_REQUIRED": "Enter a reason",
+    "ERR_TRANSITION_NOT_ALLOWED": "The order can't move to that status",
+    "ERR_CHANGE_NOT_ACKNOWLEDGED": "This order has a new change. Acknowledge it first",
+    "ERR_CANNOT_CHANGE_OWN_ROLE": "You can't change your own role or deactivate yourself",
+    "ERR_LAST_SUPER_ADMIN": "At least one super admin must remain",
+    "unknown": "Something went wrong. Try again"
+  }
+}

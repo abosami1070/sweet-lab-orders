@@ -1,0 +1,22 @@
+# إعدادات Supabase المحلية (الحقول غير المذكورة تأخذ القيم الافتراضية)
+project_id = "sweet-lab-orders"
+
+[api]
+schemas = ["public"]
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[realtime]
+enabled = true
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000"]
+# الحسابات تُنشأ من الإدارة فقط — لا تسجيل ذاتي
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false
