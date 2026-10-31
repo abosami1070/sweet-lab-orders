@@ -402,5 +402,177 @@
       "shareWhatsapp": "Share on WhatsApp",
       "shareMessage": "Hello {name},\nYour Sweet Lab ordering account is ready.\nSign in: {url}\nEmail: {email}\nPassword: {password}"
     }
+  },
+  "orders": {
+    "form": {
+      "products": "Products",
+      "otherProducts": "Other products",
+      "rules": "Min {min} · step {step} {unit}",
+      "leadDays": "{count, plural, one {Order 1 day ahead} other {Order {n} days ahead}}",
+      "decrease": "Decrease {name}",
+      "increase": "Increase {name}",
+      "quantityOf": "{name} quantity ({unit})",
+      "itemNote": "Note for {name}",
+      "itemNotePlaceholder": "Note for this item (optional)",
+      "delivery": "Delivery",
+      "date": "Delivery date",
+      "cutoffHint": "Same-day orders until {time}",
+      "window": "Delivery window",
+      "chooseWindow": "Choose window",
+      "branch": "Branch",
+      "mainBranch": "Main branch",
+      "notes": "Notes for the kitchen",
+      "reason": "Reason for change",
+      "reasonPlaceholder": "Shown to the kitchen and the shop",
+      "warnClosed": "The lab is closed this day {reason}",
+      "warnCutoff": "Today’s cutoff ({time}) has passed; pick another day",
+      "warnLead": "“{name}” needs advance prep; earliest date is {date}",
+      "summary": "{count, plural, =0 {No items selected yet} one {1 item} other {{count} items}}",
+      "submit": "Send order",
+      "saveChanges": "Save changes",
+      "sending": "Sending…",
+      "afterSubmit": "The order goes to the admin for approval; track it in “My orders”.",
+      "windowRequired": "Choose a delivery window",
+      "offline": "You’re offline. Sending works again when you reconnect.",
+      "networkError": "Connection dropped while sending. Tap again — the order won’t be duplicated.",
+      "noProductsTitle": "No products available to order right now",
+      "noProductsBody": "Please contact the lab admin."
+    },
+    "new": {
+      "title": "New order",
+      "description": "Choose items, quantities and delivery date.",
+      "reorderDescription": "Same items as your previous order. Check quantities and pick a date.",
+      "back": "My orders"
+    },
+    "mine": {
+      "title": "My orders",
+      "description": "Statuses update automatically.",
+      "new": "New order",
+      "emptyTitle": "No orders yet",
+      "emptyBody": "Send your shop’s first order.",
+      "open": "Open orders",
+      "noOpen": "No open orders.",
+      "past": "Past orders"
+    },
+    "view": {
+      "title": "Order details",
+      "back": "My orders",
+      "backAdmin": "Orders",
+      "placedTitle": "Order sent",
+      "updatedTitle": "Changes saved",
+      "placedBody": "The status here updates automatically as it’s approved and prepared.",
+      "needsReviewTitle": "The admin asked for changes to this order",
+      "needsReviewBody": "Read the reason below, then edit the order or resubmit it as is.",
+      "edit": "Edit order",
+      "reorder": "Order again",
+      "editItems": "Edit items",
+      "history": "Order history"
+    },
+    "edit": {
+      "title": "Edit order",
+      "titleWithNumber": "Edit order #{n}",
+      "back": "Order details",
+      "description": "Change items, quantities or date, then save.",
+      "descriptionApproved": "This order is approved: the kitchen will be alerted, and a reason is required.",
+      "locked": "This order can’t be edited in its current status."
+    },
+    "admin": {
+      "title": "Orders",
+      "description": "Approve new orders and follow those in the kitchen.",
+      "tabsLabel": "Filter orders",
+      "tabs": {
+        "review": "Awaiting decision",
+        "active": "In the kitchen",
+        "closed": "Closed"
+      },
+      "dateFilter": "Delivery date",
+      "apply": "Show",
+      "clear": "All days",
+      "empty": {
+        "review": "No orders awaiting a decision",
+        "active": "No orders in the kitchen",
+        "closed": "No closed orders"
+      }
+    },
+    "list": {
+      "deliveryOn": "Delivery {date}",
+      "changedBadge": "Changed",
+      "itemsCount": "{count, plural, one {1 item} other {{count} items}}"
+    },
+    "details": {
+      "shop": "Shop",
+      "branch": "Branch",
+      "deliveryDate": "Delivery date",
+      "window": "Window",
+      "items": "Items",
+      "reasonLabel": "Reason:"
+    },
+    "diff": {
+      "title": "Order was changed",
+      "reason": "Reason: {reason}",
+      "added": "Added: {name} ({qty})",
+      "removed": "Removed: {name}",
+      "qtyChanged": "{name}: {from} → {to}",
+      "itemNoteChanged": "Note changed for {name}",
+      "dateChanged": "Date: {from} → {to}",
+      "windowChanged": "Delivery window changed",
+      "notesChanged": "Order notes changed"
+    },
+    "timeline": {
+      "created": "Order created",
+      "edited": "Order edited",
+      "changeAcknowledged": "Kitchen saw the change",
+      "statusChanged": "{status}",
+      "note": "Note"
+    },
+    "actions": {
+      "approve": "Approve",
+      "needsReview": "Request changes",
+      "reject": "Reject",
+      "cancel": "Cancel",
+      "acknowledge": "Receive order",
+      "start": "Start prep",
+      "ready": "Ready",
+      "deliver": "Delivered",
+      "reasonFor": "Reason for “{action}”",
+      "confirm": "Confirm",
+      "back": "Back",
+      "resubmit": "Resubmit as is",
+      "cancelOrder": "Cancel order",
+      "cancelConfirm": "Cancel this order?",
+      "seenChange": "I’ve seen the change"
+    }
+  },
+  "kitchen": {
+    "title": "Kitchen board",
+    "daysLabel": "Delivery day",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "planner": "Production plan",
+    "emptyColumn": "No orders",
+    "changedNotice": "⚠️ Changed after it was received. Check the items, then confirm.",
+    "cancelledTitle": "Orders cancelled for this day: stop preparing them",
+    "overdue": "{count, plural, one {1 order from earlier days not delivered} other {{n} orders from earlier days not delivered}}",
+    "showOverdue": "Show",
+    "deliveredCount": "{count, plural, one {1 order delivered this day} other {{n} orders delivered this day}}",
+    "soundOn": "Sound alerts on",
+    "soundOff": "Turn on sound alerts",
+    "soundTap": "Tap to enable sound",
+    "newOrderToast": "New order #{n}",
+    "changedToast": "Order #{n} changed",
+    "cancelledToast": "Order #{n} cancelled"
+  },
+  "planner": {
+    "title": "Production plan",
+    "description": "Total quantity per item by delivery day.",
+    "daysLabel": "Pick a day",
+    "today": "Today",
+    "product": "Item",
+    "approved": "Approved to prepare",
+    "pending": "Awaiting approval",
+    "orders": "Orders",
+    "emptyTitle": "Nothing for this day",
+    "emptyBody": "Quantities appear here as orders arrive.",
+    "pendingHint": "Quantities awaiting approval are for planning only and hidden from the kitchen until approved."
   }
 }

@@ -402,5 +402,177 @@
       "shareWhatsapp": "مشاركة عبر واتساب",
       "shareMessage": "مرحباً {name}،\nتم فتح حسابك في منصة طلبات Sweet Lab.\nرابط الدخول: {url}\nالبريد: {email}\nكلمة المرور: {password}"
     }
+  },
+  "orders": {
+    "form": {
+      "products": "المنتجات",
+      "otherProducts": "منتجات أخرى",
+      "rules": "الحد الأدنى {min} · الزيادة {step} {unit}",
+      "leadDays": "{count, plural, one {يُطلب قبل يوم} two {يُطلب قبل يومين} few {يُطلب قبل {n} أيام} many {يُطلب قبل {n} يوماً} other {يُطلب قبل {n} يوم}}",
+      "decrease": "إنقاص {name}",
+      "increase": "زيادة {name}",
+      "quantityOf": "كمية {name} ({unit})",
+      "itemNote": "ملاحظة على {name}",
+      "itemNotePlaceholder": "ملاحظة على هذا الصنف (اختياري)",
+      "delivery": "التسليم",
+      "date": "تاريخ التسليم",
+      "cutoffHint": "طلبات نفس اليوم حتى الساعة {time}",
+      "window": "فترة التسليم",
+      "chooseWindow": "اختر الفترة",
+      "branch": "الفرع",
+      "mainBranch": "الفرع الرئيسي",
+      "notes": "ملاحظات للمعمل",
+      "reason": "سبب التعديل",
+      "reasonPlaceholder": "يظهر للمعمل والعميل",
+      "warnClosed": "المعمل مغلق في هذا اليوم {reason}",
+      "warnCutoff": "انتهى وقت طلبات اليوم ({time})، اختر يوماً آخر",
+      "warnLead": "«{name}» يحتاج تجهيزاً مسبقاً، أقرب موعد له {date}",
+      "summary": "{count, plural, =0 {لم تختر أي صنف بعد} one {صنف واحد} two {صنفان} few {{count} أصناف} many {{count} صنفاً} other {{count} صنف}}",
+      "submit": "إرسال الطلب",
+      "saveChanges": "حفظ التعديلات",
+      "sending": "جارٍ الإرسال…",
+      "afterSubmit": "يصل الطلب للإدارة للاعتماد، وتتابع حالته من «طلباتي».",
+      "windowRequired": "اختر فترة التسليم",
+      "offline": "لا يوجد اتصال بالإنترنت. سيعمل الإرسال عند عودة الاتصال.",
+      "networkError": "انقطع الاتصال أثناء الإرسال. اضغط الزر مرة أخرى، ولن يتكرر الطلب.",
+      "noProductsTitle": "لا توجد منتجات متاحة للطلب الآن",
+      "noProductsBody": "تواصل مع إدارة المعمل."
+    },
+    "new": {
+      "title": "طلب جديد",
+      "description": "اختر الأصناف والكميات وموعد التسليم.",
+      "reorderDescription": "نفس أصناف الطلب السابق. راجع الكميات واختر موعد التسليم.",
+      "back": "طلباتي"
+    },
+    "mine": {
+      "title": "طلباتي",
+      "description": "تتحدث حالة الطلبات تلقائياً.",
+      "new": "طلب جديد",
+      "emptyTitle": "لا توجد طلبات بعد",
+      "emptyBody": "أرسل أول طلب لمحلك.",
+      "open": "الطلبات الجارية",
+      "noOpen": "لا توجد طلبات جارية.",
+      "past": "طلبات سابقة"
+    },
+    "view": {
+      "title": "تفاصيل الطلب",
+      "back": "طلباتي",
+      "backAdmin": "الطلبات",
+      "placedTitle": "تم إرسال الطلب",
+      "updatedTitle": "تم حفظ التعديلات",
+      "placedBody": "ستتغير الحالة هنا تلقائياً عند الاعتماد والتجهيز.",
+      "needsReviewTitle": "الإدارة طلبت تعديلاً على هذا الطلب",
+      "needsReviewBody": "اقرأ السبب أدناه، ثم عدّل الطلب أو أعد إرساله كما هو.",
+      "edit": "تعديل الطلب",
+      "reorder": "إعادة الطلب",
+      "editItems": "تعديل الأصناف",
+      "history": "سجل الطلب"
+    },
+    "edit": {
+      "title": "تعديل الطلب",
+      "titleWithNumber": "تعديل الطلب #{n}",
+      "back": "تفاصيل الطلب",
+      "description": "غيّر الأصناف أو الكميات أو الموعد ثم احفظ.",
+      "descriptionApproved": "الطلب معتمد: سيصل التعديل للمعمل كتنبيه، وذكر السبب إلزامي.",
+      "locked": "لا يمكن تعديل الطلب في حالته الحالية."
+    },
+    "admin": {
+      "title": "الطلبات",
+      "description": "اعتمد الطلبات الجديدة وتابع الجارية في المعمل.",
+      "tabsLabel": "تصفية الطلبات",
+      "tabs": {
+        "review": "بانتظار القرار",
+        "active": "في المعمل",
+        "closed": "منتهية"
+      },
+      "dateFilter": "تاريخ التسليم",
+      "apply": "عرض",
+      "clear": "كل الأيام",
+      "empty": {
+        "review": "لا توجد طلبات بانتظار القرار",
+        "active": "لا توجد طلبات في المعمل",
+        "closed": "لا توجد طلبات منتهية"
+      }
+    },
+    "list": {
+      "deliveryOn": "التسليم {date}",
+      "changedBadge": "معدّل",
+      "itemsCount": "{count, plural, one {صنف واحد} two {صنفان} few {{count} أصناف} many {{count} صنفاً} other {{count} صنف}}"
+    },
+    "details": {
+      "shop": "المحل",
+      "branch": "الفرع",
+      "deliveryDate": "موعد التسليم",
+      "window": "الفترة",
+      "items": "الأصناف",
+      "reasonLabel": "السبب:"
+    },
+    "diff": {
+      "title": "تم تعديل الطلب",
+      "reason": "السبب: {reason}",
+      "added": "أضيف: {name} ({qty})",
+      "removed": "حُذف: {name}",
+      "qtyChanged": "{name}: {from} ← {to}",
+      "itemNoteChanged": "تغيرت ملاحظة {name}",
+      "dateChanged": "الموعد: {from} ← {to}",
+      "windowChanged": "تغيرت فترة التسليم",
+      "notesChanged": "تغيرت ملاحظات الطلب"
+    },
+    "timeline": {
+      "created": "أُنشئ الطلب",
+      "edited": "عُدّل الطلب",
+      "changeAcknowledged": "اطّلع المعمل على التعديل",
+      "statusChanged": "{status}",
+      "note": "ملاحظة"
+    },
+    "actions": {
+      "approve": "اعتماد",
+      "needsReview": "طلب تعديل",
+      "reject": "رفض",
+      "cancel": "إلغاء",
+      "acknowledge": "استلام الطلب",
+      "start": "بدء التجهيز",
+      "ready": "جاهز",
+      "deliver": "تم التسليم",
+      "reasonFor": "سبب «{action}»",
+      "confirm": "تأكيد",
+      "back": "رجوع",
+      "resubmit": "إعادة الإرسال كما هو",
+      "cancelOrder": "إلغاء الطلب",
+      "cancelConfirm": "إلغاء هذا الطلب؟",
+      "seenChange": "اطّلعت على التعديل"
+    }
+  },
+  "kitchen": {
+    "title": "لوحة المعمل",
+    "daysLabel": "يوم التسليم",
+    "today": "اليوم",
+    "tomorrow": "غداً",
+    "planner": "جدول الإنتاج",
+    "emptyColumn": "لا توجد طلبات",
+    "changedNotice": "⚠️ عُدّل هذا الطلب بعد استلامه. راجع الأصناف ثم أكّد.",
+    "cancelledTitle": "طلبات أُلغيت لهذا اليوم: أوقف تجهيزها",
+    "overdue": "{count, plural, one {طلب واحد من أيام سابقة لم يُسلَّم} two {طلبان من أيام سابقة لم يُسلَّما} few {{n} طلبات من أيام سابقة لم تُسلَّم} many {{n} طلباً من أيام سابقة لم تُسلَّم} other {{n} طلب من أيام سابقة لم تُسلَّم}}",
+    "showOverdue": "عرضها",
+    "deliveredCount": "{count, plural, one {سُلّم طلب واحد في هذا اليوم} two {سُلّم طلبان في هذا اليوم} few {سُلّمت {n} طلبات في هذا اليوم} many {سُلّم {n} طلباً في هذا اليوم} other {سُلّم {n} طلب في هذا اليوم}}",
+    "soundOn": "التنبيه الصوتي مفعّل",
+    "soundOff": "تفعيل التنبيه الصوتي",
+    "soundTap": "اضغط لتشغيل الصوت",
+    "newOrderToast": "طلب جديد #{n}",
+    "changedToast": "تعديل على الطلب #{n}",
+    "cancelledToast": "أُلغي الطلب #{n}"
+  },
+  "planner": {
+    "title": "جدول الإنتاج",
+    "description": "مجموع الكميات لكل صنف حسب يوم التسليم.",
+    "daysLabel": "اختر اليوم",
+    "today": "اليوم",
+    "product": "الصنف",
+    "approved": "معتمد للتجهيز",
+    "pending": "بانتظار الاعتماد",
+    "orders": "الطلبات",
+    "emptyTitle": "لا توجد كميات لهذا اليوم",
+    "emptyBody": "تظهر هنا بعد وصول الطلبات.",
+    "pendingHint": "الكميات بانتظار الاعتماد للتخطيط فقط ولا تظهر للمعمل حتى تُعتمد."
   }
 }
