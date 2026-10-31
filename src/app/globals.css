@@ -86,6 +86,8 @@ h1, h2, h3 { font-weight: 700; line-height: 1.4; }
   }
   .btn-primary { @apply btn bg-primary text-primary-on hover:bg-primary-hover; }
   .btn-ghost { @apply btn border border-line bg-surface text-ink hover:bg-primary-soft; }
+  .btn-danger { @apply btn border border-danger bg-surface text-danger hover:bg-surface-raised; }
+  .btn-sm { @apply min-h-[36px] px-3 text-sm; }
   .field {
     @apply block w-full min-h-touch rounded-control border border-line bg-surface px-3 text-ink placeholder:text-ink-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary-soft;
   }

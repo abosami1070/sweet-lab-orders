@@ -20,6 +20,7 @@ const adminNav: NavItem[] = [
   { href: '/planner', key: 'planner', icon: 'calendar' },
   { href: '/admin/products', key: 'products', icon: 'cake' },
   { href: '/admin/customers', key: 'customers', icon: 'store' },
+  { href: '/admin/users', key: 'users', icon: 'users' },
   { href: '/admin/settings', key: 'settings', icon: 'settings' }
 ];
 
@@ -35,8 +36,8 @@ export function navForRole(role: AppRole): NavItem[] {
     case 'kitchen_staff':
       return kitchenNav;
     case 'admin':
-      return adminNav;
     case 'super_admin':
-      return [...adminNav.slice(0, 5), { href: '/admin/users', key: 'users', icon: 'users' }, adminNav[5]];
+      // المشرف يرى حسابات العملاء فقط داخل صفحة المستخدمين، والمشرف العام يرى الجميع
+      return adminNav;
   }
 }

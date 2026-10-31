@@ -23,3 +23,6 @@ export type Profile = {
   is_active: boolean;
   customer: { name_ar: string; name_en: string } | null;
 };
+
+export const PRODUCT_UNITS = ['piece', 'box', 'tray', 'kg', 'cake'] as const;
+export type ProductUnit = (typeof PRODUCT_UNITS)[number];

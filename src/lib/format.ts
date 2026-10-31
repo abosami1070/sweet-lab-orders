@@ -11,3 +11,9 @@ export const formatDate = (
   value: Date | string,
   opts: Intl.DateTimeFormatOptions = { dateStyle: 'medium' }
 ) => new Intl.DateTimeFormat(intlLocale(locale), { timeZone: TIME_ZONE, ...opts }).format(new Date(value));
+
+// تاريخ اليوم بتوقيت الرياض بصيغة YYYY-MM-DD (يطابق app.riyadh_today() في القاعدة)
+export const riyadhToday = () => new Intl.DateTimeFormat('en-CA', { timeZone: TIME_ZONE }).format(new Date());
+
+// "10:00:00" من القاعدة → "10:00" لحقول الوقت
+export const hhmm = (value: string | null | undefined) => (value ?? '').slice(0, 5);
